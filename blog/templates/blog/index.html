@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+    {% if blog %}
+        {% for blog in blog %}
+	    <div>
+	        <h2>{{ blog.title }}</h2>
+		<a href="{% url 'blog:detail' blog_id=blog.id %}">詳細</a>
+	    </div>
+	    <hr>
+	    <br>
+	{% endfor %}
+    {% else %}
+	<h1>現在はありません</h1>
+    {% endif %}
+
+{% endblock %}
