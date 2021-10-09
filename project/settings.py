@@ -127,6 +127,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 SUMMERNOTE_CONFIG = {
+        'summernote': {
+            'maximumImageFileSize': 5000 * 1024,
+        },
         'toolbar': [
             ['cleaner', ['cleaner']],
             ['style', ['style']],
